@@ -7,6 +7,3 @@
 * npm i
 * npm run start
 
-
-
-Impersonate Mark Ferlatte ;) 
