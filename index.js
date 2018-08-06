@@ -8,12 +8,12 @@ const rl = readline.createInterface({
     terminal: false
 });
 
-const input_with_broken_utf = './data/sample-with-broken-utf8.csv';
-const input1 = './data/simple.csv';
-const input2 = './data/sample.csv';
+const input_with_broken_utf = 'sample-with-broken-utf8.csv';
+const input1 = 'simple.csv';
+const input2 = 'sample.csv';
 
 
-rl.question('please enter the path to csv file (defaults to ./data/sample-with-broken-utf8.csv): ', (answer) => {
+rl.question('please enter filename to process from "data" directory (defaults to sample-with-broken-utf8.csv): ', (answer) => {
     console.log(`Thank you, processing your file: ${answer}`);
     if(answer) {
         processCsv(answer);
@@ -21,6 +21,5 @@ rl.question('please enter the path to csv file (defaults to ./data/sample-with-b
     else{
         processCsv(input2);
     }
-
     rl.close();
 });

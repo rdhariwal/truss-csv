@@ -9,7 +9,7 @@ const config = {header: false, encoding: encoding, error: handleError, transform
 
 
 function processCsv(filePath) {
-    const input = fs.createReadStream(filePath);
+    const input = fs.createReadStream(processedCsvPath+filePath);
     Papa.parse(input, config);
 }
 
@@ -62,7 +62,7 @@ function done(results, file) {
     // save the output to a file
     fs.writeFile(processedCsvPath+'processed_CSV.csv', Papa.unparse(results, config), (err) => {
         if (err) throw err;
-        console.log('The file has been saved!');
+        console.log('The file has been saved!'+processedCsvPath+'processed_CSV.csv');
     });
 }
 
