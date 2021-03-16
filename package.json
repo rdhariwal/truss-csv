@@ -17,7 +17,7 @@
     "rimraf": "^2.6.2"
   },
   "dependencies": {
-    "lodash": "^4.17.13",
+    "lodash": "^4.17.19",
     "moment": "^2.22.2",
     "moment-timezone": "^0.5.21",
     "papaparse": "^5.2.0"
